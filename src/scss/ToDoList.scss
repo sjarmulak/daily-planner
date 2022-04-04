@@ -1,0 +1,28 @@
+@import "variables";
+
+.ToDoList {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+  width: 100%;
+}
+
+span {
+  margin-left: 2rem;
+}
+
+ul {
+  padding-inline-start: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.done li {
+  background-color: $background-color;
+  color: $task-background;
+}
+
+.done li .taskDot {
+  background-image: url("../images/check.svg");
+}

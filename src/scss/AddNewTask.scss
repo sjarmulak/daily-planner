@@ -1,0 +1,41 @@
+@import "variables";
+
+.AddNewTask {
+  background: white;
+  list-style: none;
+  color: black;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: stretch;
+}
+
+.AddNewTask input {
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-left: 2.5rem;
+  border: none;
+  outline: none;
+}
+
+.AddNewTask input:focus {
+  border: none;
+  outline: none;
+}
+
+button {
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 50px;
+
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-image: url("../images/addTaskArrow.svg");
+  background-color: #7f5c84;
+}
+
+button:hover {
+  background-color: #958298;
+}

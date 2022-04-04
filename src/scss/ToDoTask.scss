@@ -1,0 +1,42 @@
+@import "variables";
+
+.ToDoTask {
+  background: $task-background;
+  list-style: none;
+  color: $task-font-color;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* width: 100%; */
+}
+
+.taskDot {
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: $dot-color;
+  border-radius: $border-radius;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.taskDot:hover {
+  background-color: $dot-color-hover;
+}
+
+.deleteTaskDot {
+  height: 1.8rem;
+  width: 1.8rem;
+  background-image: url("../images/deleteTask.svg");
+  background-color: $dot-delete-color;
+  border-radius: 50px;
+  margin-left: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.deleteTaskDot:hover {
+  background-color: $dot-delete-color-hover;
+}

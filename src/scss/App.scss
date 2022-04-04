@@ -1,0 +1,11 @@
+@import "variables";
+
+.App {
+  background: $app-background-color;
+  height: 100%;
+  padding: 5vh;
+  color: $task-background;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  width: 100vw;
+}

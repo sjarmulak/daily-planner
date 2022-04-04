@@ -1,0 +1,22 @@
+// colors
+$gradient-first-color: rgba(238, 174, 202, 1);
+$gradient-second-color:     rgba(148, 187, 233, 1);
+$app-background-color: linear-gradient(
+    180deg,
+    $gradient-first-color 0%,
+    $gradient-second-color 100%
+  );
+$background-color: rgba(28, 9, 58, 0.5); // kolor tła kafelka
+$task-background: white; // kolor tła pojedynczego to-do
+$task-font-color: black;
+$dot-color: #7f5c84;
+$dot-color-hover: #958298;
+$dot-delete-color: #d0d0d0;
+$dot-delete-color-hover: #513c63;
+
+// measurements
+$border-radius: 50px;
+
+// fonts
+$body-font: Helvetica, sans-serif;
+$body-font-size: 1rem;
