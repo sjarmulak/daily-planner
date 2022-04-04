@@ -14,9 +14,10 @@
 .AddNewTask input {
   font-family: Helvetica, sans-serif;
   font-size: 1rem;
-  margin-left: 2.5rem;
+  // margin-left: 2.5rem;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .AddNewTask input:focus {
@@ -25,8 +26,10 @@
 }
 
 button {
-  height: 1.8rem;
-  width: 1.8rem;
+  min-height: 1.8rem;
+  min-width: 1.8rem;
+  max-height: 1.8rem;
+  max-width: 1.8rem;
   border-radius: 50px;
 
   cursor: pointer;

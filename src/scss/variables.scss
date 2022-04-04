@@ -22,7 +22,7 @@ $small-border-radius: 25px;
 $body-font: Helvetica, sans-serif;
 $body-font-size: 1rem;
 
-// szablon pojedynczego widgetu
+// szablon pojedynczego widgetu/modułu
 @mixin module() {
   background-color: $background-color;
   border-radius: $border-radius;
