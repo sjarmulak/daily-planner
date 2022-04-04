@@ -1,13 +1,13 @@
 import "../scss/App.scss";
 import "../scss/reset.scss";
 import WelcomeUser from "./WelcomeUser";
-import ToDoList from "./ToDoList";
+import MainContent from "./MainContent";
 
 function App() {
   return (
     <div className="App">
       <WelcomeUser />
-      <ToDoList />
+      <MainContent />
     </div>
   );
 }
