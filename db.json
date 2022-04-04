@@ -44,11 +44,6 @@
       "task": "go to the movies",
       "finished": false,
       "id": 24
-    },
-    {
-      "task": "",
-      "finished": false,
-      "id": 25
     }
   ]
 }
