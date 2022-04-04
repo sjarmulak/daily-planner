@@ -5,4 +5,15 @@
     @include flexbox();
     height: 15vh;
     margin-bottom: 2rem;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 100;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin: 0.7rem;
+    }
 }
