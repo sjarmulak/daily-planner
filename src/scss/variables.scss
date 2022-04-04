@@ -16,7 +16,45 @@ $dot-delete-color-hover: #513c63;
 
 // measurements
 $border-radius: 50px;
+$small-border-radius: 25px;
 
 // fonts
 $body-font: Helvetica, sans-serif;
 $body-font-size: 1rem;
+
+// szablon pojedynczego widgetu
+@mixin module() {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;  
+  margin-right: 0.5rem;  
+  min-height: 5rem;
+  height: 70vh;
+  flex-grow: 1;
+
+}
+
+// mixin flex
+@mixin flexbox(
+  $display: flex,
+  $direction: column,
+  $wrap: nowrap,
+  $shrink: 0,
+  $grow: 1,
+  $alignContent: null,
+  $justifyContent: center,
+  $alignItems: center,
+  $justifyItems: null) {
+    display: $display;
+    flex-direction: $direction;
+    align-content: $alignContent; 
+    justify-content: $justifyContent; 
+    align-items: $alignItems; 
+    justify-items: $justifyItems; 
+    flex-wrap: $wrap;
+    flex-shrink: $shrink;
+    flex-grow: $grow;
+}

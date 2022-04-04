@@ -1,8 +1,6 @@
 @import "variables";
 
-.WelcomeUser {
+.DateTime {
     @include module();
     @include flexbox();
-    height: 15vh;
-    margin-bottom: 2rem;
 }

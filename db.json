@@ -8,16 +8,11 @@
     {
       "id": 3,
       "task": "water my cat",
-      "finished": false
-    },
-    {
-      "task": "sdmhjbfsdjkbf",
-      "finished": true,
-      "id": 9
+      "finished": true
     },
     {
       "task": "ohananana",
-      "finished": true,
+      "finished": false,
       "id": 11
     },
     {
@@ -44,6 +39,11 @@
       "task": "task",
       "finished": false,
       "id": 23
+    },
+    {
+      "task": "go to the movies",
+      "finished": false,
+      "id": 24
     }
   ]
 }

@@ -1,8 +1,6 @@
 @import "variables";
 
-.WelcomeUser {
+.Weather {
     @include module();
     @include flexbox();
-    height: 15vh;
-    margin-bottom: 2rem;
 }

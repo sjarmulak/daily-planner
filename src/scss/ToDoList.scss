@@ -1,10 +1,9 @@
 @import "variables";
 
 .ToDoList {
-  background-color: $background-color;
-  border-radius: $border-radius;
-  padding: 1rem;
-  width: 100%;
+  @include module();
+  overflow: scroll;
+
 }
 
 span {
