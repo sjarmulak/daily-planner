@@ -32,11 +32,58 @@ export default function Weather() {
   return (
     <div className="Weather">
       {typeof weatherData.main != "undefined" ? (
-        <div>tu bedzie pogoda</div>
+        <div className="weatherData">
+          {/* tu bedzie pogoda */}
+          <div className="iconAndTemp">
+            <div
+              id="weatherImage"
+              className={weatherData.weather[0].main}
+            ></div>
+            <h3 className="temperature">{weatherData.main.temp.toFixed()}°</h3>
+          </div>
+
+          <h1 className="location">{weatherData.name}</h1>
+          <h2 className="weatherDescription">
+            {weatherData.weather[0].main.toLowerCase()}
+          </h2>
+
+          {/* * */}
+        </div>
       ) : (
         <div>loading weather...</div>
       )}
-      {weatherData.name}
     </div>
   );
 }
+
+// przykładowe Weather Data:
+// {
+//   coord: { lon: 16.8, lat: 51.6 },
+//   weather: [
+//     { id: 804, main: "Clouds", description: "overcast clouds", icon: "04d" },
+//   ],
+//   base: "stations",
+//   main: {
+//     temp: 5.93,
+//     feels_like: 5.93,
+//     temp_min: 4.47,
+//     temp_max: 6.75,
+//     pressure: 1004,
+//     humidity: 95,
+//   },
+//   visibility: 222,
+//   wind: { speed: 0.89, deg: 200, gust: 2.68 },
+//   clouds: { all: 100 },
+//   dt: 1649141690,
+//   sys: {
+//     type: 2,
+//     id: 2000041,
+//     country: "PL",
+//     sunrise: 1649132355,
+//     sunset: 1649179888,
+//   },
+//   timezone: 7200,
+//   id: 3087307,
+//   name: "Rawicz",
+//   cod: 200,
+// };
