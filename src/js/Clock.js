@@ -5,10 +5,16 @@ export default function Clock() {
   const [time, setTime] = useState(new Date());
   const [minutes, setMinutes] = useState(time.getMinutes());
   const [hours, setHours] = useState(time.getHours());
-  const [minDegrees, setMinDegrees] = useState(0);
-  const [hourDegrees, setHourDegrees] = useState(0);
-  const [hourStyle, setHourStyle] = useState({});
-  const [minStyle, setMinStyle] = useState({});
+  const [minDegrees, setMinDegrees] = useState((minutes / 60) * 360 + 90);
+  const [hourDegrees, setHourDegrees] = useState(
+    (hours / 12) * 360 + (minutes / 60) * 30 + 90
+  );
+  const [hourStyle, setHourStyle] = useState({
+    transform: `rotate(${hourDegrees}deg)`,
+  });
+  const [minStyle, setMinStyle] = useState({
+    transform: `rotate(${minDegrees}deg)`,
+  });
 
   useEffect(() => {
     const updateTime = () => {
@@ -17,15 +23,17 @@ export default function Clock() {
       setHours(time.getHours());
       setHourDegrees((hours / 12) * 360 + (minutes / 60) * 30 + 90);
       setMinDegrees((minutes / 60) * 360 + 90);
-      console.log(time);
+      setHourStyle({ transform: `rotate(${hourDegrees}deg)` });
+      setMinStyle({ transform: `rotate(${minDegrees}deg)` });
     };
-    const Timer = setInterval(() => updateTime(), 1000);
-  }, []);
+    const Ticker = setInterval(() => {
+      updateTime();
+    }, 1000);
 
-  useEffect(() => {
-    setHourStyle({ transform: `rotate(${hourDegrees}deg)` });
-    setMinStyle({ transform: `rotate(${minDegrees}deg)` });
-  }, [minDegrees]);
+    return () => {
+      clearInterval(Ticker);
+    };
+  });
 
   return (
     <div className="Clock">

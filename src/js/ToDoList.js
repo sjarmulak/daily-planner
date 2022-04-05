@@ -27,8 +27,7 @@ export default function ToDoList() {
   };
 
   // uaktualniamy listę todo przy renderze
-  useEffect(getTodos, []);
-  useEffect(getTodos, [toggledTask]);
+  useEffect(getTodos);
 
   // co się dzieje po "odhaczeniu" zadania
   const handleTaskDone = (id) => {
@@ -42,8 +41,6 @@ export default function ToDoList() {
         console.log(error);
       });
 
-    console.log(toggledTask);
-
     fetch(url + `/${id}`, {
       method: "PATCH", // uaktualniamy w db
       body: JSON.stringify(toggledTask),
@@ -54,8 +51,7 @@ export default function ToDoList() {
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
-        }
-        throw new Error("Oops...");
+        } else throw new Error("Oops...");
       })
       .then((data) => {
         console.log(data);
@@ -63,6 +59,8 @@ export default function ToDoList() {
       .catch((error) => {
         console.log(error);
       });
+
+    getTodos();
   };
 
   // usuwamy całkowicie zadanie z listy
@@ -73,12 +71,12 @@ export default function ToDoList() {
       .then((resp) => {
         if (resp.ok) {
           console.log("Todo deleted");
-        }
-        throw new Error("Oops...");
+        } else throw new Error("Oops...");
       })
       .catch((error) => {
         console.log(error);
       });
+    getTodos();
   };
 
   // po dodaniu nowego zadania uaktualniamy listę? tu chyba coś źle ;)
@@ -100,6 +98,7 @@ export default function ToDoList() {
                   task={task}
                   finished={finished}
                   onDone={handleTaskDone}
+                  onDelete={handleTaskDeleted}
                 />
               )
           )

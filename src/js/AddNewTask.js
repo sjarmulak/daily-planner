@@ -5,6 +5,11 @@ const url = "http://localhost:3000/todos";
 
 export default function AddNewTask({ onAdded }) {
   const [taskDescription, setTaskDescription] = useState(""); // treść nowego zadania todo
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    console.log("Reload");
+  }, [taskDescription]);
 
   const save = (e) => {
     e.preventDefault();
@@ -36,11 +41,11 @@ export default function AddNewTask({ onAdded }) {
       });
   };
 
-  // ?
   const handleTaskAdded = () => {
     if (typeof onDone === "function") {
       onAdded();
     }
+    setInputValue("");
   };
 
   return (
@@ -48,7 +53,9 @@ export default function AddNewTask({ onAdded }) {
       <input
         type="text"
         placeholder="add new task..."
+        value={inputValue}
         onChange={(e) => {
+          setInputValue(e.target.value);
           setTaskDescription(e.target.value);
         }}
       />

@@ -9,8 +9,14 @@ export default function DateTime() {
     const updateClock = () => {
       setDate(new Date());
     };
-    const Timer = setInterval(() => updateClock(), 1000);
-  }, []);
+    const Timer = setInterval(() => {
+      updateClock();
+    }, 1000);
+
+    return () => {
+      clearInterval(Timer);
+    };
+  });
 
   const weekday = (day) => {
     switch (day) {

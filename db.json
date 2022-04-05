@@ -6,42 +6,27 @@
       "finished": false
     },
     {
-      "id": 3,
-      "task": "water my cat",
-      "finished": true
-    },
-    {
-      "task": "ohananana",
-      "finished": false,
-      "id": 11
-    },
-    {
-      "task": "popopo",
-      "finished": true,
-      "id": 13
-    },
-    {
-      "task": "bob",
-      "finished": true,
-      "id": 17
-    },
-    {
       "task": "wash my car",
       "finished": true,
       "id": 18
     },
     {
-      "task": "go to bank",
-      "finished": false,
-      "id": 22
-    },
-    {
       "task": "task",
       "finished": false,
-      "id": 23
+      "id": 19
     },
     {
-      "task": "go to the movies",
+      "task": "new",
+      "finished": true,
+      "id": 20
+    },
+    {
+      "task": "new task",
+      "finished": true,
+      "id": 21
+    },
+    {
+      "task": "add new",
       "finished": false,
       "id": 24
     }
