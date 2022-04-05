@@ -3,10 +3,12 @@ import "../scss/Clock.scss";
 
 export default function Clock() {
   const [time, setTime] = useState(new Date());
-  const [minutes, setMinutes] = useState(new Date().getMinutes());
-  const [hours, setHours] = useState(new Date().getHours());
+  const [minutes, setMinutes] = useState(time.getMinutes());
+  const [hours, setHours] = useState(time.getHours());
   const [minDegrees, setMinDegrees] = useState(0);
   const [hourDegrees, setHourDegrees] = useState(0);
+  const [hourStyle, setHourStyle] = useState({});
+  const [minStyle, setMinStyle] = useState({});
 
   useEffect(() => {
     const updateTime = () => {
@@ -15,16 +17,15 @@ export default function Clock() {
       setHours(time.getHours());
       setHourDegrees((hours / 12) * 360 + (minutes / 60) * 30 + 90);
       setMinDegrees((minutes / 60) * 360 + 90);
+      console.log(time);
     };
     const Timer = setInterval(() => updateTime(), 1000);
   }, []);
 
-  const hourStyle = {
-    transform: `rotate(${hourDegrees}deg)`,
-  };
-  const minStyle = {
-    transform: `rotate(${minDegrees}deg)`,
-  };
+  useEffect(() => {
+    setHourStyle({ transform: `rotate(${hourDegrees}deg)` });
+    setMinStyle({ transform: `rotate(${minDegrees}deg)` });
+  }, [minDegrees]);
 
   return (
     <div className="Clock">

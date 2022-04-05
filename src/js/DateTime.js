@@ -66,7 +66,7 @@ export default function DateTime() {
 
   return (
     <div className="DateTime">
-      <Clock />
+      <Clock time={date} />
       <h1 className="time">
         {date.getHours()}:{date.getMinutes()}
       </h1>
