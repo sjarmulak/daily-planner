@@ -34,13 +34,12 @@ export default function ToDoList() {
     fetch(url + `/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setToggledTask({ finished: !data.finished }); // zmieniamy zadanie na zrobione/niezrobione
       })
       .catch((error) => {
         console.log(error);
       });
-
+    getTodos();
     fetch(url + `/${id}`, {
       method: "PATCH", // uaktualniamy w db
       body: JSON.stringify(toggledTask),
@@ -59,7 +58,6 @@ export default function ToDoList() {
       .catch((error) => {
         console.log(error);
       });
-
     getTodos();
   };
 
@@ -79,7 +77,7 @@ export default function ToDoList() {
     getTodos();
   };
 
-  // po dodaniu nowego zadania uaktualniamy listę? tu chyba coś źle ;)
+  // po dodaniu nowego zadania uaktualniamy listę
   const handleTaskAdded = () => {
     getTodos();
   };

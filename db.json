@@ -1,24 +1,9 @@
 {
   "todos": [
     {
-      "id": 1,
-      "task": "water my plants",
-      "finished": false
-    },
-    {
-      "task": "wash my car",
-      "finished": true,
-      "id": 18
-    },
-    {
       "task": "task",
       "finished": false,
       "id": 19
-    },
-    {
-      "task": "new",
-      "finished": true,
-      "id": 20
     },
     {
       "task": "new task",
@@ -27,8 +12,18 @@
     },
     {
       "task": "add new",
-      "finished": false,
+      "finished": true,
       "id": 24
+    },
+    {
+      "task": "water",
+      "finished": true,
+      "id": 25
+    },
+    {
+      "task": "no nonono",
+      "finished": true,
+      "id": 26
     }
   ]
 }
