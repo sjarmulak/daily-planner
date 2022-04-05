@@ -9,6 +9,10 @@
         @include flexbox($direction: row);
     }
 
+    .descriptionAndHighLow {
+        @include flexbox($direction: row, $justifyContent: space-between);
+    }
+
     .weatherData {
         width: 100%;
         height: 100%;

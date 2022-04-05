@@ -43,9 +43,12 @@ export default function Weather() {
           </div>
 
           <h1 className="location">{weatherData.name}</h1>
-          <h2 className="weatherDescription">
-            {weatherData.weather[0].main.toLowerCase()}
-          </h2>
+          <div className="descriptionAndHighLow">
+            <h2 className="weatherDescription">
+              {weatherData.weather[0].main.toLowerCase()}
+            </h2>
+            <span> </span>
+          </div>
 
           {/* * */}
         </div>

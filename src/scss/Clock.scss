@@ -1,0 +1,33 @@
+@import "variables";
+$clock-size: 12vw;
+$border-size: 0.6vw;
+
+.Clock {
+    width: $clock-size;
+    height: $clock-size;
+    position: relative;
+    padding: 2rem;
+    border: $border-size solid $task-background;
+    border-radius: 50%;
+    margin: 1rem auto;
+
+    .hand {
+        width: 50%;
+        right: 50%;
+        height: $border-size;
+        background: $task-background;
+        position: absolute;
+        top: 50%;
+        border-radius: $border-size;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+      }
+      
+      .hand.hour-hand {
+        width: 30%;
+      }
+      
+      .hand.min-hand {
+        width: 40%;
+      }
+}

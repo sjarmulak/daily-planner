@@ -3,4 +3,7 @@
 .DateTime {
     @include module();
     @include flexbox();
+    justify-content: flex-start;
+
+
 }
