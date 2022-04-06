@@ -8,6 +8,7 @@ const url = "http://localhost:3000/todos";
 export default function ToDoList() {
   const [todoList, setTodoList] = useState(false);
   const [toggledTask, setToggledTask] = useState({}); // biezace zadanie ktore zmieniamy na zrobione/niezrobione
+  const [currID, setCurrID] = useState(null);
 
   // ściągamy naszą listę todo
   const getTodos = () => {
@@ -35,12 +36,16 @@ export default function ToDoList() {
       .then((response) => response.json())
       .then((data) => {
         setToggledTask({ finished: !data.finished }); // zmieniamy zadanie na zrobione/niezrobione
+        setCurrID(id);
       })
       .catch((error) => {
         console.log(error);
       });
     getTodos();
-    fetch(url + `/${id}`, {
+  };
+
+  useEffect(() => {
+    fetch(url + `/${currID}`, {
       method: "PATCH", // uaktualniamy w db
       body: JSON.stringify(toggledTask),
       headers: {
@@ -59,7 +64,7 @@ export default function ToDoList() {
         console.log(error);
       });
     getTodos();
-  };
+  }, [toggledTask]);
 
   // usuwamy całkowicie zadanie z listy
   const handleTaskDeleted = (id) => {
