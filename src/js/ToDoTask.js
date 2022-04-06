@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../scss/ToDoTask.scss";
 
-export default function ToDoTask({ id, task, finished, onDone, onDelete }) {
+export default function ToDoTask({ id, task, ifFinished, onDone, onDelete }) {
   const url = "http://localhost:3000/todos";
 
   // zmieniamy zadanie na zrobione/niezrobione
-  const toggleTaskFinished = () => {
-    if (typeof onDone === "function") {
-      onDone(id);
-    }
+  const updateTask = (id, task, successCallback) => {
+    fetch(`${url}/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PUT",
+      body: JSON.stringify(task),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (typeof successCallback === "function") {
+          successCallback(data);
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
+  const toggleTaskFinished = () => {
+    const toggledTask = {
+      id,
+      task,
+      finished: !ifFinished,
+    };
+
+    updateTask(id, toggledTask, () => {
+      onDone(toggledTask);
+    });
+  };
+
+  // usuwamy zadanie
   const deleteTask = (id, successCallback) => {
     fetch(`${url}/${id}`, {
       method: "DELETE",
@@ -24,7 +48,6 @@ export default function ToDoTask({ id, task, finished, onDone, onDelete }) {
       .catch((err) => console.log(err));
   };
 
-  // usuwamy zadanie
   const handleDeleteTask = () => {
     deleteTask(id, () => {
       onDelete(id);

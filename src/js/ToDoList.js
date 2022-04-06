@@ -8,7 +8,6 @@ const url = "http://localhost:3000/todos";
 export default function ToDoList() {
   const url = "http://localhost:3000/todos";
   const [todoList, setTodoList] = useState(false);
-  const [toggledTask, setToggledTask] = useState(false); // biezace zadanie ktore zmieniamy na zrobione/niezrobione
 
   // ściągamy naszą listę todo
   const getTodos = (successCallback) => {
@@ -28,8 +27,8 @@ export default function ToDoList() {
   }, []);
 
   // co się dzieje po "odhaczeniu" zadania
-  const handleTaskDone = (id) => {
-    //
+  const handleTaskDone = () => {
+    getTodos(setTodoList);
   };
 
   // usuwamy całkowicie zadanie z listy
@@ -56,7 +55,7 @@ export default function ToDoList() {
                   key={id}
                   id={id}
                   task={task}
-                  finished={finished}
+                  ifFinished={finished}
                   onDone={handleTaskDone}
                   onDelete={handleTaskDeleted}
                 />
@@ -78,7 +77,7 @@ export default function ToDoList() {
                   key={id}
                   id={id}
                   task={task}
-                  finished={finished}
+                  ifFinished={finished}
                   onDone={handleTaskDone}
                   onDelete={handleTaskDeleted}
                 />

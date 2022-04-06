@@ -1,19 +1,14 @@
 {
   "todos": [
     {
-      "task": "add",
-      "finished": true,
-      "id": 30
+      "task": "zadanie 1",
+      "finished": false,
+      "id": 1
     },
     {
-      "task": "sdsffsfsfdsf",
-      "finished": false,
-      "id": 33
-    },
-    {
-      "task": "ololo",
-      "finished": false,
-      "id": 34
+      "id": 2,
+      "task": "zad 2",
+      "finished": true
     }
   ]
 }

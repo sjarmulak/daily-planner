@@ -37,27 +37,6 @@ export default function AddNewTask({ onAdded }) {
     };
 
     createTask(newTask, onAdded);
-
-    // fetch(url, {
-    //   method: "POST", // dodajemy nasze nowe zadania do db
-    //   body: JSON.stringify(newTask),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // })
-    //   .then((res) => {
-    //     if (res.ok) {
-    //       console.log("Task added");
-    //       return res.json();
-    //     }
-    //   })
-    //   .then((data) => {
-    //     console.log(data);
-    //     // getTodos();
-    //   })
-    //   .catch((err) => {
-    //     throw new Error(err);
-    //   });
   };
 
   const handleTaskAdded = () => {
