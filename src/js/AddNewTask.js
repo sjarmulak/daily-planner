@@ -7,6 +7,23 @@ export default function AddNewTask({ onAdded }) {
   const [taskDescription, setTaskDescription] = useState(""); // treść nowego zadania todo
   const [inputValue, setInputValue] = useState("");
 
+  const createTask = (task, successCallback) => {
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(task),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (typeof successCallback === "function") {
+          successCallback(data);
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
   useEffect(() => {
     console.log("Reload");
   }, [taskDescription]);
@@ -19,26 +36,28 @@ export default function AddNewTask({ onAdded }) {
       finished: false,
     };
 
-    fetch(url, {
-      method: "POST", // dodajemy nasze nowe zadania do db
-      body: JSON.stringify(newTask),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        if (res.ok) {
-          console.log("Task added");
-          return res.json();
-        }
-      })
-      .then((data) => {
-        console.log(data);
-        // getTodos();
-      })
-      .catch((err) => {
-        throw new Error(err);
-      });
+    createTask(newTask, onAdded);
+
+    // fetch(url, {
+    //   method: "POST", // dodajemy nasze nowe zadania do db
+    //   body: JSON.stringify(newTask),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((res) => {
+    //     if (res.ok) {
+    //       console.log("Task added");
+    //       return res.json();
+    //     }
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+    //     // getTodos();
+    //   })
+    //   .catch((err) => {
+    //     throw new Error(err);
+    //   });
   };
 
   const handleTaskAdded = () => {
