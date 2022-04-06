@@ -34,7 +34,7 @@ export default function ToDoList() {
 
   // usuwamy całkowicie zadanie z listy
   const handleTaskDeleted = (id) => {
-    //
+    setTodoList((prev) => prev.filter((task) => task.id !== id));
   };
 
   // po dodaniu nowego zadania uaktualniamy listę
