@@ -1,13 +1,13 @@
 {
   "todos": [
     {
-      "task": "zadanie 1",
-      "finished": false,
-      "id": 1
+      "id": 1,
+      "task": "new task",
+      "finished": false
     },
     {
       "id": 2,
-      "task": "zad 2",
+      "task": "go to gym",
       "finished": true
     }
   ]
