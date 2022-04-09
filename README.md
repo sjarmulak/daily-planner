@@ -12,7 +12,7 @@
 
 5. **Widget z datą i czasem** // `Date()`
 
-6. **Responsywność** //  *użycie **React Media** i media queries, użycie **React Router** do nawigacji i wyświetlania w wersji “mobilnej”*
+6. **Responsywność** //  *użycie `react-media` i media queries, użycie `react-router` do nawigacji i wyświetlania w wersji “mobilnej”*
 
 7. **Style przy wykorzystaniu SASS**
 
