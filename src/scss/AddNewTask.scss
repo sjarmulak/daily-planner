@@ -1,9 +1,9 @@
 @import "variables";
 
 .AddNewTask {
-  background: white;
+  background: $task-background;
   list-style: none;
-  color: black;
+  color: $task-font-color;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 50px;
@@ -12,9 +12,8 @@
 }
 
 .AddNewTask input {
-  font-family: Helvetica, sans-serif;
-  font-size: 1rem;
-  // margin-left: 2.5rem;
+  font-family: $body-font;
+  font-size: $body-font-size;
   border: none;
   outline: none;
   width: 100%;
@@ -30,15 +29,15 @@ button {
   min-width: 1.8rem;
   max-height: 1.8rem;
   max-width: 1.8rem;
-  border-radius: 50px;
+  border-radius: $border-radius;
 
   cursor: pointer;
   border: none;
-  color: white;
+  color: $task-background;
   background-image: url("../images/addTaskArrow.svg");
-  background-color: #7f5c84;
+  background-color: $dot-color;
 }
 
 button:hover {
-  background-color: #958298;
+  background-color: $dot-color-hover;
 }

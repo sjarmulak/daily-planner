@@ -5,7 +5,6 @@ $border-size: 0.9vh;
 .Clock {
 
     position: relative;
-    // padding: 2rem;
     border: $border-size solid $task-background;
     border-radius: 50%;
     margin: 1vw;
@@ -22,7 +21,6 @@ $border-size: 0.9vh;
         top: 50%;
         border-radius: $border-size;
         transform-origin: 100%;
-        transform: rotate(90deg);
       }
       
       .hand.hour-hand {

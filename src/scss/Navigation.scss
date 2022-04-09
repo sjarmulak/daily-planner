@@ -14,7 +14,6 @@
 
         li.nav-link {
           
-                // @include module();
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -62,7 +61,7 @@
             }   
 
             a {
-                display: block; // make bigger 
+                display: block; 
                 height: 100%;
                 width: 100%;
                 padding: 1vw;
