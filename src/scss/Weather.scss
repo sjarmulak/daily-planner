@@ -1,12 +1,27 @@
 @import "variables";
 
+$mobile: "(max-width: 999px)";
+$tablet: "(min-width: 1000px) and (max-width: 1200px)";
+$desktop: "(min-width: 1201px)";
+
 .Weather {
     @include module();
     @include flexbox();
     justify-content: flex-start;
+
+
     
     .iconAndTemp {
-        @include flexbox($direction: row);
+        @include flexbox($direction: column);
+        justify-content: stretch;
+        width: 100%;
+        height: 100%;
+
+      
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+
+
     }
 
     .descriptionAndHighLow {
@@ -19,24 +34,35 @@
         padding: 1rem;
     }
 
+    .weatherInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+
     .location {
-        font-size: 2vw;
+        font-size: 2rem;
         margin-bottom: 0.7rem;
     }
 
     .temperature {
-        font-size: 7vw;
+        font-size: 6rem;
         font-weight: 100;
-        margin-left: 1vw;
-        margin-right: 0.8vw;
+    }
+
+    .weatherDescription {
+        font-size: 1.5rem;
     }
 
     #weatherImage {
-        width: 70%;
-        // height: 100%;
-        padding-top: 60%; /* 1:1 Aspect Ratio */
-        position: relative; 
-        background-repeat: no-repeat
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
     }
 
     .Clouds {
@@ -60,5 +86,20 @@
     .Other {
         background-image: url(../images/Other.svg) 
     }
+
+    // .iconAndTemp {
+    //     @media #{$mobile} {
+    //         display: flex;
+    //         flex-direction: row;
+    //       }
+    //     @media #{$mobile} {
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+    //     @media #{$desktop} {
+    //         display: flex;
+    //         flex-direction: row;
+    //     }
+    // }
     
 }

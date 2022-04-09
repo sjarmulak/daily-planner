@@ -56,9 +56,11 @@ export default function ToDoTask({ id, task, ifFinished, onDone, onDelete }) {
 
   return (
     <li className="ToDoTask" key={id}>
-      <div className="taskDot" onClick={toggleTaskFinished}></div>
-      {task}
-      <div className="deleteTaskDot" onClick={handleDeleteTask}></div>
+      <div className="taskContainer">
+        <div className="taskDot" onClick={toggleTaskFinished}></div>
+        <p>{task}</p>
+        <div className="deleteTaskDot" onClick={handleDeleteTask}></div>
+      </div>
     </li>
   );
 }

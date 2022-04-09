@@ -3,7 +3,9 @@
 .App {
   background: $app-background-color;
   height: 100%;
-  padding: 5vh;
+  
+  @media #{$mobile} {padding: 3vh;}
+  @media #{$desktop} {padding: 5vh;}
   color: $task-background;
   font-family: $body-font;
   font-size: $body-font-size;

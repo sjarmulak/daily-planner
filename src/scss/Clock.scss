@@ -1,15 +1,17 @@
 @import "variables";
-$clock-size: 12vw;
-$border-size: 0.6vw;
+$clock-size: 50vw;
+$border-size: 0.9vh;
 
 .Clock {
-    width: $clock-size;
-    height: $clock-size;
+
     position: relative;
-    padding: 2rem;
+    // padding: 2rem;
     border: $border-size solid $task-background;
     border-radius: 50%;
-    margin: 1rem auto;
+    margin: 1vw;
+    @media #{$mobile} { width: $clock-size;     height: $clock-size;}
+    @media #{$desktop} { width: $clock-size/3;   height: $clock-size/3;}
+
 
     .hand {
         width: 50%;

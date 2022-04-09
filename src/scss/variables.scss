@@ -1,3 +1,7 @@
+// media queries
+$mobile: "(max-width: 999px)";
+$desktop: "(min-width: 1000px)";
+
 // colors
 $gradient-first-color: rgba(238, 174, 202, 1);
 $gradient-second-color:     rgba(148, 187, 233, 1);
@@ -32,8 +36,8 @@ $body-font-size: 1rem;
   margin-left: 0.5rem;  
   margin-right: 0.5rem;  
   min-height: 5rem;
-  height: 70vh;
   flex-grow: 1;
+  height: 85%;
 
 }
 

@@ -1,14 +1,34 @@
 {
   "todos": [
     {
-      "id": 1,
-      "task": "new task",
-      "finished": false
+      "task": "go to gym",
+      "finished": false,
+      "id": 1
     },
     {
       "id": 2,
-      "task": "go to gym",
+      "task": "eat vegetables",
       "finished": true
+    },
+    {
+      "task": "water my plants",
+      "finished": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "task": "go shopping",
+      "finished": true
+    },
+    {
+      "id": 5,
+      "task": "sign up for yoga class",
+      "finished": true
+    },
+    {
+      "task": "write essay",
+      "finished": false,
+      "id": 6
     }
   ]
 }

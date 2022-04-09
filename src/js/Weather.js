@@ -35,22 +35,17 @@ export default function Weather() {
         <div className="weatherData">
           {/* tu bedzie pogoda */}
           <div className="iconAndTemp">
-            <div
-              id="weatherImage"
-              className={weatherData.weather[0].main}
-            ></div>
-            <h3 className="temperature">{weatherData.main.temp.toFixed()}°</h3>
+            <div id="weatherImage" className={weatherData.weather[0].main} />
+            <div className="weatherInfo">
+              <h3 className="temperature">
+                {weatherData.main.temp.toFixed()}°
+              </h3>
+              <h1 className="location">{weatherData.name}</h1>
+              <h2 className="weatherDescription">
+                {weatherData.weather[0].main.toLowerCase()}
+              </h2>
+            </div>
           </div>
-
-          <h1 className="location">{weatherData.name}</h1>
-          <div className="descriptionAndHighLow">
-            <h2 className="weatherDescription">
-              {weatherData.weather[0].main.toLowerCase()}
-            </h2>
-            <span> </span>
-          </div>
-
-          {/* * */}
         </div>
       ) : (
         <div>loading weather...</div>

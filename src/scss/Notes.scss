@@ -4,11 +4,12 @@
     @include module();
     @include flexbox($justifyContent: flex-start, $alignItems: flex-start);
 
+
     .notepad {
         width: 100%;
         height: 100%;
         padding-right: 2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
 
         span {
             margin-left: 2rem;

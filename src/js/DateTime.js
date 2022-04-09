@@ -30,7 +30,7 @@ export default function DateTime() {
         return "thursday";
       case 5:
         return "friday";
-      case 5:
+      case 6:
         return "saturday";
       case 7:
         return "sunday";
@@ -72,14 +72,21 @@ export default function DateTime() {
 
   return (
     <div className="DateTime">
-      <Clock time={date} />
-      <h1 className="time">
-        {date.getHours()}:{date.getMinutes()}
-      </h1>
-      <h2 className="dayOfWeek">{weekday(date.getDay())}</h2>
-      <h3 className="completeDate">
-        {date.getDate()} {month(date.getMonth())} {date.getFullYear()}
-      </h3>
+      <div className="clockContainer">
+        <Clock time={date} />
+      </div>
+
+      <div className="dateInfo">
+        <h1 className="time">
+          {("0" + date.getHours()).slice(-2)}:
+          {("0" + date.getMinutes()).slice(-2)}
+          {/* slice(-2) extracts the last two elements in the string */}
+        </h1>
+        <h2 className="dayOfWeek">{weekday(date.getDay())}</h2>
+        <h3 className="completeDate">
+          {date.getDate()} {month(date.getMonth())} {date.getFullYear()}
+        </h3>
+      </div>
     </div>
   );
 }

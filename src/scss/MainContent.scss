@@ -1,10 +1,36 @@
 @import "variables";
 
 .MainContent {
-    // @include flexbox($direction: row);
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    height: 75vh;
-    width: 100%;
+  height: 78vh;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+    // @media #{$mobile} {
+    //     display: flex;
+    //     flex-direction: column;
+    //   }
+    //   @media #{$desktop} {
+    //     display: grid;
+    //     grid-auto-flow: column;
+    //     grid-auto-columns: 1fr;
+    //   }
+}
+
+// .weather-and-date {
+//     display: flex;
+//     flex-direction: column;
+//     height: 70vh;
+//     padding-bottom: 1rem;
+
+// }
+
+
+.WidgetViewDesktop {
+  height: 78vh;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
 }
