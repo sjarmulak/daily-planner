@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/daily-planner/static/css/main.97b741e3.css",
+    "main.js": "/daily-planner/static/js/main.97845e81.js",
+    "static/js/787.a46d5648.chunk.js": "/daily-planner/static/js/787.a46d5648.chunk.js",
+    "static/media/Snow.svg": "/daily-planner/static/media/Snow.d2e451b8b7d97b729eae.svg",
+    "static/media/Thunderstorm.svg": "/daily-planner/static/media/Thunderstorm.4871bb8b741f83b65bc4.svg",
+    "static/media/Drizzle.svg": "/daily-planner/static/media/Drizzle.afda282867a9659831b3.svg",
+    "static/media/Rain.svg": "/daily-planner/static/media/Rain.f7ae5ac87a9b6b35db25.svg",
+    "static/media/Notes.svg": "/daily-planner/static/media/Notes.9dd489836b76802240c7.svg",
+    "static/media/TodoList.svg": "/daily-planner/static/media/TodoList.69c9a0df136de9490781.svg",
+    "static/media/Clear.svg": "/daily-planner/static/media/Clear.fea7fd1a79b2856b654f.svg",
+    "static/media/check.svg": "/daily-planner/static/media/check.6864ca5aa62eb00f6f2d.svg",
+    "static/media/Other.svg": "/daily-planner/static/media/Other.92281c8b24b2289230f6.svg",
+    "static/media/deleteTask.svg": "/daily-planner/static/media/deleteTask.daddd1fd89aa02a9c4bc.svg",
+    "static/media/Clouds.svg": "/daily-planner/static/media/Clouds.8bb208c5753331324028.svg",
+    "static/media/addTaskArrow.svg": "/daily-planner/static/media/addTaskArrow.dfa61a676daba4b7c067.svg",
+    "static/media/Clock.svg": "/daily-planner/static/media/Clock.da6ef0edd450219ab021.svg",
+    "index.html": "/daily-planner/index.html",
+    "main.97b741e3.css.map": "/daily-planner/static/css/main.97b741e3.css.map",
+    "main.97845e81.js.map": "/daily-planner/static/js/main.97845e81.js.map",
+    "787.a46d5648.chunk.js.map": "/daily-planner/static/js/787.a46d5648.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97b741e3.css",
+    "static/js/main.97845e81.js"
+  ]
+}
