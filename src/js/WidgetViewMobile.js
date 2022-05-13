@@ -11,7 +11,7 @@ import Navigation from "./Navigation";
 export default function WidgetViewMobile() {
   return (
     <div className="WidgetViewMobile">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <>
           <div className="app-content widget-view-mobile">
             <Navigation />
